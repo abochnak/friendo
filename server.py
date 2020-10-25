@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 import json
+import os
 app = Flask(__name__)
 
 data = {}
@@ -15,6 +16,9 @@ def data_route():
 
 @app.route('/upload', methods=['POST'])
 def upload():
+    secret = request.form.get('secret')
+    if secret != os.getenv('SECRET'):
+        return 'Invalid secret key'
     name = request.form.get('name')
     value = request.form.get('value')
     data[name] = value
