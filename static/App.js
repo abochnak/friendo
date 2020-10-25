@@ -35,7 +35,12 @@ var updateFriendos = function() {
     fetch('/data')
         .then(data => data.json())
         .then(data => {
+            if (!data) return;
             var entries = Object.entries(data);
+            if (entries.length == 0) {
+                document.querySelector("#friendos").innerHTML = '<div class="card text-center" style="width: 18rem;"><h3 class="card-body">No friendos yet 🙁</h3></div>';
+                return;
+            }
             document.querySelector("#friendos").innerHTML = "";
             for (var i=0; i<entries.length; i++) {
                 var item = entries[i];
@@ -47,10 +52,6 @@ var updateFriendos = function() {
                     "emoji": get_emoji(item[1])
                 });
                 document.querySelector("#friendos").innerHTML += html;
-            }
-
-            if (entries.length == 0) {
-                document.querySelector("#friendos").innerHTML = '<div class="card text-center" style="width: 18rem;"><h3 class="card-body">No friendos yet 🙁</h3></div>';
             }
         })
 };

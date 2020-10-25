@@ -4,7 +4,7 @@ import requests
 
 p = argparse.ArgumentParser()
 p.add_argument('--name', type=str)
-p.add_argument('--url', type=str)
+p.add_argument('--url', type=str, default='https://friendo-technica.herokuapp.com')
 args = p.parse_args()
 
 # this port address is for the serial tx/rx pins on the GPIO header
@@ -26,7 +26,7 @@ def main():
         # reading is a string...do whatever you want from here
         print(reading)
         if reading in ['FURIOUS', 'SHOCKED', 'ANGRY', 'FROWN', 'MEH', 'SMILE', 'AMAZED']:
-            req = requests.post('http://%s/upload' % args.url, {'name': args.name, 'value': reading})
+            req = requests.post('%s/upload' % args.url, {'name': args.name, 'value': reading})
             print('Upload:', req.text)
 
 
