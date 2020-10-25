@@ -122,13 +122,13 @@ void output_state(int state) {
       Serial.println("ANGRY");
       break;
     case FROWN_STATE:
-      Serial.println("FROWN");
+      Serial.println("SAD");
       break;
     case MEH_STATE:
       Serial.println("MEH");
       break;
     case SMILE_STATE:
-      Serial.println("SMILE");
+      Serial.println("HAPPY");
       break;
     case AMAZED_STATE:
       Serial.println("AMAZED");

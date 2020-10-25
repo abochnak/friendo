@@ -26,7 +26,7 @@ def main():
             pass
         # reading is a string...do whatever you want from here
         print(reading)
-        if reading in ['FURIOUS', 'SHOCKED', 'ANGRY', 'FROWN', 'MEH', 'SMILE', 'AMAZED']:
+        if reading in ['FURIOUS', 'SHOCKED', 'ANGRY', 'SAD', 'MEH', 'HAPPY', 'AMAZED']:
             req = requests.post('http://%s/upload' % args.url, {
                 'value': reading,
                 'name': args.name,

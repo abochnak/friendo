@@ -15,11 +15,11 @@ var get_emoji = function(val) {
         return "😲";
     } else if (val == "ANGRY") {
         return "😠";
-    } else if (val == "FROWN") {
+    } else if (val == "SAD") {
         return "🙁";
     } else if (val == "MEH") {
         return "😐";
-    } else if (val == "SMILE") {
+    } else if (val == "HAPPY") {
         return "🙂";
     } else if (val == "AMAZED") {
         return "🤩";
