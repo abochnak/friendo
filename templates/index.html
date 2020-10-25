@@ -1,0 +1,33 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/App.css">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">friendo</span>
+      </nav>
+
+      <div class="container-fluid">
+        <h1 class="text-center" style="padding: 70px;">Here are your friendos:</h1>
+        <div id="friendos">
+
+        </div>
+        <script type="text/template" id="friendo">
+            <div class="card text-center" style="width: 18rem;">
+                <div class="card-body">
+                <h3 class="card-title"><b>{name}</b> is feeling:</h3>
+                <h1 style="font-size: 100px">{emoji}</h1>
+                <h3 class="card-title"><b>{value}</b></h3>
+                </div>
+            </div>
+        </script>
+          
+      </div>
+
+      <footer class="navbar fixed-bottom">
+          Built at Technica 2020 <a style="float: right" href="https://github.com/abochnak/friendo">View on GitHub</a>
+      </footer>
+      <script src="/static/App.js"></script>
+</body>
+

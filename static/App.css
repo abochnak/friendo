@@ -1,0 +1,14 @@
+.h1 { font-family: 'Londrina Solid', cursive;
+     font-size: 32px;
+    }
+
+.navbar{
+    background: rgb(88,210,234);
+    background: linear-gradient(90deg, rgba(88,210,234,1) 0%, rgba(238,105,152,1) 100%);
+}
+
+.card {
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 10px; 
+}
