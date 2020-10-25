@@ -48,6 +48,10 @@ var updateFriendos = function() {
                 });
                 document.querySelector("#friendos").innerHTML += html;
             }
+
+            if (entries.length == 0) {
+                document.querySelector("#friendos").innerHTML = '<div class="card text-center" style="width: 18rem;"><h3 class="card-body">No friendos yet 🙁</h3></div>';
+            }
         })
 };
 
